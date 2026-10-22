@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="css/style.css">
+ 
+</head>
+<body>
+        <header>
+        <h1>Finanly</h1>
+        <p>Seu controle financeiro pessoal</p>
+    </header>
+
+    <main>
+        <section id="resumo">
+          <label for="entrada">Entrada</label>
+          <input type="text" id="entrada">
+
+            <label for="saida">Saída</label>
+          <input type="text" id="saida">
+
+          <label for="entradaSaida">Resultado das movimentações</label>
+          <input type="text" id="entradaSaida">
+
+        </section>
+
+        <section id="NovaMovimentacao">
+          <h2>Nova Movimentação</h2>
+         
+          <label for="tipoRegistro">O que deseja registrar?</label>
+          <input type="checkbox" id="tipoRegistro" value="entrada">Dinheiro de entrada
+          <input type="checkbox" id="tipoRegistro" value="saida">Dinheiro de saída
+
+          <label for="descricao">Descrição</label>
+          <input type="text" id="descricao" required placeholder="Ex: Salário, Aluguel, etc...">
+
+            <label for="categoria">Categoria</label>
+            <input type="checkbox" id="categoria" value="servicos">Serviços/trabalho
+            <input type="checkbox" id="categoria" value="salario">Salario/Renda fixa
+            <input type="checkbox" id="categoria" value="moradia">Moradia/Contas
+            <input type="checkbox" id="categoria" value="alimentacao">Alimentação
+            <input type="checkbox" id="categoria" value="outros">outros
+
+            <label for="valor">Valor</label>
+            <input type="text" id="valor" required placeholder="Ex: 100,00">
+
+            <label for="data">Data</label>
+            <input type="date" id="data" required>
+
+            <button id="btnSalvar">Salvar movimentação</button>
+
+        </section>
+
+        
+    </main>
+
+
+
+
+       <script src="js/script.js" defer></script>
+</body>
+</html>
