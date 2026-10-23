@@ -8,55 +8,98 @@
  
 </head>
 <body>
-        <header>
-        <h1>Finanly</h1>
-        <p>Seu controle financeiro pessoal</p>
-    </header>
+       <header>
+    <h1>Finanly</h1>
+    <p>Seu controle financeiro pessoal</p>
+</header>
 
-    <main>
-        <section id="resumo">
-          <label for="entrada">Entrada</label>
-          <input type="text" id="entrada">
+<main>
+    <section id="resumo">
+       <h2>Resumo financeiro</h2>
 
-            <label for="saida">Saída</label>
-          <input type="text" id="saida">
+    <div class="campo-resumo">
+        <label for="entrada">Total de entradas</label>
+        <input type="text" id="entrada"
+               value="R$ 0,00" readonly>
+    </div>
 
-          <label for="entradaSaida">Resultado das movimentações</label>
-          <input type="text" id="entradaSaida">
+    <div class="campo-resumo">
+        <label for="saida">Total de saídas</label>
+        <input type="text" id="saida"
+               value="R$ 0,00" readonly>
+    </div>
 
-        </section>
+    <div class="campo-resumo">
+        <label for="entradaSaida">Saldo atual</label>
+        <input type="text" id="entradaSaida"
+               value="R$ 0,00" readonly>
+    </div> 
+    </section>
 
-        <section id="NovaMovimentacao">
-          <h2>Nova Movimentação</h2>
-         
-          <label for="tipoRegistro">O que deseja registrar?</label>
-          <input type="checkbox" id="tipoRegistro" value="entrada">Dinheiro de entrada
-          <input type="checkbox" id="tipoRegistro" value="saida">Dinheiro de saída
+    <section id="novaMovimentacao">
+        <h2>Nova movimentação</h2>
 
-          <label for="descricao">Descrição</label>
-          <input type="text" id="descricao" required placeholder="Ex: Salário, Aluguel, etc...">
+        <p>O que deseja registrar?</p>
 
-            <label for="categoria">Categoria</label>
-            <input type="checkbox" id="categoria" value="servicos">Serviços/trabalho
-            <input type="checkbox" id="categoria" value="salario">Salario/Renda fixa
-            <input type="checkbox" id="categoria" value="moradia">Moradia/Contas
-            <input type="checkbox" id="categoria" value="alimentacao">Alimentação
-            <input type="checkbox" id="categoria" value="outros">outros
+        <label>
+            <input type="radio" name="tipoRegistro"
+                   value="entrada" required>
+            Dinheiro de entrada
+        </label>
 
-            <label for="valor">Valor</label>
-            <input type="text" id="valor" required placeholder="Ex: 100,00">
+        <label>
+            <input type="radio" name="tipoRegistro"
+                   value="saida">
+            Dinheiro de saída
+        </label>
 
-            <label for="data">Data</label>
-            <input type="date" id="data" required>
+        <label for="descricao">Descrição</label>
+        <input type="text" id="descricao"
+               placeholder="Ex.: Salário, aluguel..."
+               required>
 
-            <button id="btnSalvar">Salvar movimentação</button>
+        <label for="categoria">Categoria</label>
+        <select id="categoria" required>
+            <option value="">Selecione uma categoria</option>
+            <option value="servicos">Serviços/trabalho</option>
+            <option value="salario">Salário/renda fixa</option>
+            <option value="moradia">Moradia/contas</option>
+            <option value="alimentacao">Alimentação</option>
+            <option value="outros">Outros</option>
+        </select>
 
-        </section>
+        <label for="valor">Valor (R$)</label>
+        <input type="number" id="valor"
+               min="0.01" step="0.01"
+               placeholder="Ex.: 100,00" required>
 
-        
-    </main>
+        <label for="data">Data</label>
+        <input type="date" id="data" required>
 
+        <button type="button" id="btnSalvar">
+            Salvar movimentação
+        </button>
+    </section>
 
+    <section id="historico">
+        <h2>Histórico de movimentações</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Categoria</th>
+                    <th>Tipo</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabelaMovimentacoes">
+            </tbody>
+        </table>
+    </section>
+</main>
 
 
        <script src="js/script.js" defer></script>
