@@ -1,28 +1,35 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+
 
 body {
     font-family: Arial, sans-serif;
     background-color: black;
     color: white;
     padding: 32px;
+    min-height: 100vh;
+    
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
-header {
-    margin-bottom: 32px;
+.navbar {
+     background-color: #134611;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    margin-bottom: 34px;
+    box-shadow: 0 4px 12px rgba(33, 134, 91, 0.25);
 }
 
-header h1 {
+.navbar h1 {
     color: #21865b;
     font-size: 32px;
     margin-bottom: 8px;
 }
 
-header p {
-    color: #68766f;
+.navbar p {
+    margin-bottom: 0;
 }
 
 main {
@@ -40,8 +47,8 @@ main {
     color: #ffffff;
     padding: 24px;
     border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
-    border: 1px solid #e2e8f0;
+       box-shadow: 0 4px 12px rgba(33, 134, 91, 0.25);
+    
 }
 
 #resumo h2 {
@@ -92,8 +99,7 @@ main {
     color: #ffffff;
     padding: 28px;
     border-radius: 16px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+     box-shadow: 0 4px 12px rgba(33, 134, 91, 0.25);
     margin-top: 28px;
 }
 
@@ -205,7 +211,7 @@ main {
     background-color: #134611;
    
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+     box-shadow: 0 4px 12px rgba(33, 134, 91, 0.25);
     overflow-x: auto;
 }
 
