@@ -134,7 +134,7 @@ main {
     border: 1px solid #cbd5e1;
     border-radius: 9px;
     background-color: white;
-    color: #ffffff;
+    color: black;
     font-size: 14px;
     font-family: inherit;
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -252,13 +252,13 @@ main {
     border-bottom: 1px solid #e2e8f0;
 }
 
-#historico tbody tr:nth-child(even) {
+#historico tbody tr {
     background-color: #f8fafc;
 }
 
 
 #historico tbody tr:hover {
-    background-color: #eff6ff;
+    background-color: lightgray;
     transition: background-color 0.2s ease;
 }
 
